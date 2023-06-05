@@ -1,8 +1,12 @@
 import Book from './modules/Book.js';
-import { DateTime } from './modules/luxon.js';
+import { showTime } from './modules/showTime.js';
+import navLinks from './modules/showNavigation.js';
+import addNew from './modules/addNew.js';
 
-Book.showBooks();
-document.querySelector('form').addEventListener('submit', Book.addNew);
-Book.showNaviagtionBar();
-Book.showTime();
-DateTime.now().toString();
+
+window.onload = () => {
+    Book.showBooks();
+    showTime();
+    document.querySelector('form').addEventListener('submit', addNew);
+    navLinks()
+  };
