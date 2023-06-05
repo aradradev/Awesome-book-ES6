@@ -1,4 +1,4 @@
-import Book from './Book.js'
+import Book from './Book.js';
 
 const showPopWin = () => {
   const popWin = document.createElement('div');
